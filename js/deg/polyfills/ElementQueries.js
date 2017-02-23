@@ -342,6 +342,7 @@
         function readRules(rules) {
             var selector = '';
             if (!rules) {
+                console.error('no rules');
                 return;
             }
             if ('string' === typeof rules) {
