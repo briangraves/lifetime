@@ -384,6 +384,7 @@
                 } catch(e) {
                     if (e.name !== 'SecurityError') {
                         throw e;
+                        console.error('secourity error');
                     }
                 }
             }
