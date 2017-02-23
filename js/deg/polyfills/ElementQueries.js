@@ -380,11 +380,11 @@
             for (var i = 0, j = document.styleSheets.length; i < j; i++) {
                 try {
                     readRules(document.styleSheets[i].cssRules || document.styleSheets[i].rules || document.styleSheets[i].cssText);
-                    console.log('try');
+                    console.log(document.styleSheets[i].cssRules);
                 } catch(e) {
+                        console.error('security error');
                     if (e.name !== 'SecurityError') {
                         throw e;
-                        console.error('secourity error');
                     }
                 }
             }
